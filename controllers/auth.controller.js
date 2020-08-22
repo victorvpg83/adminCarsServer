@@ -44,8 +44,6 @@ const login = async( req, res = response ) => {
             msg: 'Hubo un error inesperado'
         })
     }
-
-
 }
 
 const renewToken = async( req, res = response ) => {

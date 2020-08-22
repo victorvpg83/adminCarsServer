@@ -21,6 +21,8 @@ dbConnection()
 // Routes
 app.use( '/api/users', require('./routes/user.routes') )
 app.use( '/api/login', require('./routes/auth.routes') )
+app.use( '/api/car', require('./routes/car.routes') )
+app.use( '/api/maintenance', require('./routes/maintenance.routes') )
 
 
 

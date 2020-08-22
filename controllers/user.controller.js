@@ -7,7 +7,8 @@ const getUsers = async( req, res = response ) => {
 
     try {
 
-        const users = await User.find({}, 'email name surname cars role')
+        const users = await User.find({}, 'email name surname car role')
+                                .populate('car', 'brand model')
         
         res.json({
             ok: true,
@@ -17,7 +18,7 @@ const getUsers = async( req, res = response ) => {
         console.log(error)
         res.status(500).json({
             ok: false,
-            msg: 'Ha habiso un error al buscar usuarios'
+            msg: 'Ha habido un error al buscar usuarios'
         })
     }
 

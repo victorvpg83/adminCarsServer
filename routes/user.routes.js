@@ -12,7 +12,7 @@ const router = Router()
     Route '/api/users
 */
 
-router.get( '/',validateJWT, getUsers )
+router.get( '/',validateJWT , getUsers )
 
 router.post( 
     '/',
