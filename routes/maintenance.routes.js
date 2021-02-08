@@ -14,7 +14,7 @@ router.post( '/', validateJWT, createMaintenance )
 // Get car maintenances
 router.get( '/', validateJWT, getCarMaintenance )
 
-router.post( '/:id', validateJWT, updateMaintenance )
+router.put( '/:id', validateJWT, updateMaintenance )
 
 router.delete( '/:id', validateJWT, deleteMaintenance )
 

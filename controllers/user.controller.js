@@ -34,13 +34,14 @@ const createUser = async( req, res = response ) => {
         const existEmail = await User.findOne({ email })
         
         if (existEmail) {
-            return res.status(400).json({
+            res.status(400).json({
                 ok: false,
                 msg: 'El email ya existe'
             })
         }
         
         const user = new User( req.body )
+        // console.log(user)
 
         // Crypt password
         const salt = bcrypt.genSaltSync()

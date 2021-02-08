@@ -15,7 +15,7 @@ const MaintenanceSchema = new Schema({
     airFilter: {
         type: Boolean,
     },
-    timingbBelt: {
+    timingBelt: {
         type: Boolean,
     },
     sparkPlugs: {

@@ -154,7 +154,7 @@ const deleteCar = async( req, res = response ) => {
         }
 
         await Car.findByIdAndDelete( carId )
-        await User.findByIdAndUpdate(uid, { $pull: { car: carId } }, { new: true })
+        await User.findByIdAndUpdate(req.uid, { $pull: { car: carId } }, { new: true })
 
         res.json({
             ok: true,

@@ -5,6 +5,8 @@ const Car = require('../models/car.model')
 
 const createMaintenance = async( req, res = response ) => {
 
+    console.log(req.body)
+
     const { car } = req.body
     const uid = req.uid
 
@@ -12,7 +14,7 @@ const createMaintenance = async( req, res = response ) => {
 
         // Review car
         const carDb = await Car.findById( car )
-        console.log(carDb.user, uid)
+        // console.log(carDb.user, uid)
 
         if (!carDb) {
             return res.status(404).json({

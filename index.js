@@ -3,6 +3,9 @@ require('dotenv').config()
 const cors = require('cors')
 const { dbConnection } = require('./database/config')
 const { response } = require('express')
+const bodyParser = require('body-parser')
+
+
 
 
 // Create server
@@ -13,6 +16,9 @@ app.use( cors() )
 
 // Read and Body Parse
 app.use( express.json() )
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 // Connect to db
 dbConnection()
