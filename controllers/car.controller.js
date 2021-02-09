@@ -64,6 +64,7 @@ const getCar = async( req, res = response ) => {
 
         const carDb = await Car.findById( carId )
                                 .populate( "maintenance" )
+                                .populate( "breakdown" )
         
         // review user
         if ( carDb.user.toString() !== req.uid ) {

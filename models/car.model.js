@@ -22,6 +22,10 @@ const CarSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Maintenance'
     }],
+    breakdown: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Breakdown'
+    }],
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
